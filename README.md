@@ -1,1 +1,1 @@
-# Ethereum-and-Solidity-Developer-s-Guide
+# Ethereum and Solidity Developer's Guide
