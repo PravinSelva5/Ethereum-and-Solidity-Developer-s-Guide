@@ -11,9 +11,7 @@ contract Inbox {
         message = newMessage;
     }
     
-    function getMessage() public view returns(string){
-        return message;
-    }
+
 }
 
 
@@ -33,4 +31,20 @@ payable - When someone call this function they might send ether along
 ** you can only use public or private in a function. Can't have a function that is both public and private.
 
 
+** constructor functions are always called when you create a contract function. Which is why the funciton Inbox is named after the contract Inbox
+
+
+There are two ways to run functions in a contract:
+
+    1. Calling a function 
+        - cannot modify the contract's data (ex: message function)
+        - return data
+        - runs instantly
+        - free to do!
+    
+    2. Sending a transaction to a function  
+        - can modify a contract's data
+        - takes times to execute! 
+        - returns the transaction hash 
+        - costs money
 */
