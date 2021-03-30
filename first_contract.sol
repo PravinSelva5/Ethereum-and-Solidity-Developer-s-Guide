@@ -47,4 +47,31 @@ There are two ways to run functions in a contract:
         - takes times to execute! 
         - returns the transaction hash 
         - costs money
+        
+        
+    Wei is a very small unit of a ether:
+        1 Ether == 1 000 000 000 000 000 000 Wei
+        
+        
+        
+    gasPrice = amount of Wei the sender is willing to pay per unit gas to get the transaction processed
+    
+    startGas/gasLimit = unit of gas that htis transaction can consume
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 */
