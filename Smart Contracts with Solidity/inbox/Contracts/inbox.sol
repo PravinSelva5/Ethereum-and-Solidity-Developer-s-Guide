@@ -67,16 +67,6 @@ There are two ways to run functions in a contract:
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
 */
