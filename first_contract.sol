@@ -58,8 +58,11 @@ There are two ways to run functions in a contract:
     
     startGas/gasLimit = unit of gas that htis transaction can consume
     
-    
-    
+
+
+    Contract Source  --> Solidity Compiler --> ABI (Javascript Interpretation Layer)
+                                |
+                                |-------------> Contract Bytecode (this is what gets deployed to the ETH network) --> Rinkeby
     
     
     
