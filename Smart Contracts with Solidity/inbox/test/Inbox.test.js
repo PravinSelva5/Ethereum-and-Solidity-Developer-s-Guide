@@ -4,6 +4,13 @@ const Web3 = require("web3");   // constructor function that's why the const is 
 const web3 = new Web3(ganache.provider());  // this creates an instance of web3 and tells it to connect it to a local provider we have running on our machine
 
 
+
+
+
+
+
+
+/*
 // Example of a test
 
 class Car {
@@ -16,10 +23,28 @@ class Car {
     }
 }
 
-describe('Car', )
+let car; 
 
 
-/*
+beforeEach( () => {
+    car = new Car();
+});
+
+describe('Car', () => {
+
+    it('can park', () => {
+        
+        assert.equal(car.park(), 'stopped');
+    });
+
+    it('can drive', () => {
+        
+        assert.equal(car.drive(), 'vroom');
+    })
+});
+
+
+
 ---------------------
 3 functions in Mocha
 ---------------------
