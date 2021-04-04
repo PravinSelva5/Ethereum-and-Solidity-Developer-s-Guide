@@ -10,6 +10,35 @@ const web3 = new Web3(ganache.provider());  // this creates an instance of web3 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 // Example of a test
 
