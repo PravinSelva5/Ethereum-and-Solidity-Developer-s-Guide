@@ -12,16 +12,21 @@ const {interface, bytecode} = require("../compile");
 let accounts;
 let inbox;
 
+
 // beforeEach Statement [Deploy a new contract]
 beforeEach( async () => {
     // Get a list of all accounts
     accounts = await web3.eth.getAccounts();
 
     // Use one of those accounts to deploy the contract [need access to the bytecode that compile.js creates for us]
-    inbox = await new web3.eth.Contract(JSON.parse(interface))  // tells web3 about what metyhods an Inbox contract has
-        .deploy({data: bytecode, arguments: ["Hi there!"]})  // Tells web3 that we want to deploy a new copy of this contract
-        .send({from: accounts[0], gas: '1000000'}); // Instructs web3 to send out a transaction that creates this contract
+    // tells web3 about what metyhods an Inbox contract has
+    inbox = await new web3.eth.Contract(JSON.parse(interface)) 
 
+        // Tells web3 that we want to deploy a new copy of this contract
+        .deploy({data: bytecode, arguments: ["Hi there!"]})  
+
+        // Instructs web3 to send out a transaction that creates this contract
+        .send({from: accounts[0], gas: '1000000'}); 
 
         inbox.setProvider(provider);
 });
@@ -35,15 +40,14 @@ describe('Inbox', () => {
     });
 
     it('has a default message', async () => {
-        const message = await inbox.methods.message().call();  // this is an instance of the contract (inbox) , and we are referencing the message property in the Inbox contract we created
+        // this is an instance of the contract (inbox) , and we are referencing the message property in the Inbox contract we created
+        const message = await inbox.methods.message().call();
         assert.equal(message, 'Hi there!');
     });
 })
 
 
-
 // it Statement [ Make an assertion about the contract]
-
 
 /*
  Example of a test
@@ -79,7 +83,6 @@ describe('Car', () => {
 });
 
 
-
 ---------------------
 3 functions in Mocha
 ---------------------
@@ -87,8 +90,6 @@ describe('Car', () => {
 it -- run a test and make an assertion
 describe -- Groups together 'it' functions
 beforeEach -- Execute some general setup code
-
-
 
 -------------------------
    Web3 with Contracts
